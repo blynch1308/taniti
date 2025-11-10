@@ -1,0 +1,278 @@
+/* GLOBAL STYLES & RESET */
+:root {
+  /* Tropical Color Palette */
+  --color-primary: #00778b; /* Deep Ocean Blue */
+  --color-secondary: #ffc300; /* Tropical Gold/Sunlight */
+  --color-background: #f8f8f8; /* Near White/Sand */
+  --color-text: #333333;
+  --color-footer: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* --- 1. HEADER & NAVIGATION --- */
+header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between; /* Keeps logo and nav separated */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+header h1 {
+  letter-spacing: 2px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+  font-weight: bold; /* Added for better visibility */
+}
+nav ul li a:hover {
+  /* Tropical Hover Effect */
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* --- 2. HERO SECTION (Static Image Background) --- */
+#hero {
+  /* Ensure you have 'taniti-hero-image.jpg' in your project folder */
+  background: url("taniti-hero-image.jpg") no-repeat center center/cover;
+  height: 60vh; /* Defines the height of the hero area */
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  /* Hero Image Overlay (Semi-transparent Black) */
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+#hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: opacity 0.3s;
+}
+
+/* --- 3. MAIN CONTENT (General Styles) --- */
+h2 {
+  color: var(--color-primary);
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-bottom: 2px solid var(--color-secondary);
+  padding-bottom: 5px;
+  width: fit-content;
+  margin-top: 30px;
+  /* Add these two lines to center the block */
+  margin-left: auto;
+  margin-right: auto;
+}
+.centered-heading {
+  text-align: center;
+}
+/* Titles used in cards (Homepage highlight titles) */
+h4 {
+  /* Requested change to center all h4 titles */
+  text-align: center;
+}
+.card h4 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+} /* Target the link inside the h4 */
+/* Existing CSS to make the link look like a heading */
+h4 a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  /* Optional: Add a smooth transition for the color change */
+  transition: color 0.3s ease;
+}
+
+/* NEW CSS for the hover state */
+h4 a :hover {
+  /* Change the color when the mouse is over the link */
+  color: #007bff; /* Example: A common blue for links */
+
+  /* Optional: You could also add an underline back just on hover */
+  /* text-decoration: underline; */
+}
+#highlights .card-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-top: 5px solid var(--color-secondary);
+  border-radius: 8px;
+  padding: 25px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+/* --- New Compact Activity List (for Entertainment Page) --- */
+/* This is a more space-efficient layout than the cards */
+
+/* --- New Compact Activity List (for Entertainment Page) --- */
+/* This is a more space-efficient layout than the cards */
+
+.activity-grid {
+  display: grid;
+  /* This creates a responsive grid. It will be:
+    - 1 column on small screens (< 500px)
+    - 2 columns on medium screens
+    - 3 columns on wide screens
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px; /* A little less gap to save space */
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.activity-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex; /* This puts the image and text side-by-side */
+  overflow: hidden; /* To keep the rounded corners from the image */
+}
+
+.activity-item img {
+  width: 130px; /* Fixed width for the image */
+  height: 100%; /* Make the image fill the item's height */
+  object-fit: cover;
+  flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.activity-item-content {
+  padding: 20px;
+}
+
+/* Override the global 'h4 { text-align: center; }' 
+  for this specific layout.
+*/
+.activity-item-content h4 {
+  text-align: left;
+  margin-top: 0; /* Remove extra top margin */
+}
+
+/* On very small screens, stack the image on top 
+  of the text instead of side-by-side.
+*/
+@media (max-width: 450px) {
+  .activity-item {
+    flex-direction: column; /* Stack image on top of text */
+  }
+
+  .activity-item img {
+    width: 100%; /* Image goes full-width */
+    height: 160px; /* Give it a fixed height when stacked */
+  }
+}
+/* Travel Info Page specific elements */
+.info-grid {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+/* Table Styling for Travel Info */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0 40px 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+tr:nth-child(even) {
+  background-color: #f2f9fa;
+}
+
+/* --- 4. FOOTER --- */
+footer {
+  background-color: var(--color-footer);
+  color: #aaaaaa;
+  padding: 20px 10%;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 50px;
+}

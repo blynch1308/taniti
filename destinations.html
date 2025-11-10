@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taniti: Entertainment</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* Ensures images fill the space nicely */
+            border-radius: 8px 8px 0 0;
+            /* Match the card's top corners */
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        /* Fix for the card padding in your original CSS */
+        .card {
+            padding: 0;
+            /* We'll apply padding to the content area instead */
+        }
+
+        .centered-paragraph {
+            text-align: center;
+            /* I changed 10000px to 800px for better readability */
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Taniti</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Entertainment</a></li>
+                <li><a href="hotel-resorts.html">Accomodations</a></li>
+                <li><a href="travel-info.html">Transportation</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <p class="centered-paragraph">
+                While many come to Taniti for the pristine beaches, lush rainforest,
+                and majestic volcano, the island offers a vibrant and diverse array of
+                activities for every type of traveler.
+            </p>
+            <p class="centered-paragraph">
+                Many of these activities are located in
+                <strong>Merriton Landing</strong>, a rapidly developing area on the
+                north side of Yellow Leaf Bay.
+            </p>
+
+            <h3>Adventure & Tours</h3>
+            <ul class="activity-grid">
+                <li class="activity-item">
+                    <img src="images/ziplining.jpg" alt="Person zip-lining through the rainforest canopy" />
+                    <div class="activity-item-content">
+                        <h4>Rainforest Zip-Lining</h4>
+                        <p>
+                            Soar through the lush jungle canopy for a thrilling bird's-eye
+                            view.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/snorkeling.jpg" alt="Colorful tropical fish swimming in a coral reef" />
+                    <div class="activity-item-content">
+                        <h4>Snorkeling</h4>
+                        <p>Explore vibrant coral reefs in crystal-clear waters.</p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/helicopter.jpg" alt="Helicopter flying over the Taniti volcano" />
+                    <div class="activity-item-content">
+                        <h4>Helicopter Rides</h4>
+                        <p>Get an unforgettable aerial view of the volcano and coast.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Nightlife & Culture</h3>
+            <ul class="activity-grid">
+                <li class="activity-item">
+                    <img src="images/pub.jpg" alt="Cozy interior of a microbrewery pub" />
+                    <div class="activity-item-content">
+                        <h4>Pubs & Microbrewery</h4>
+                        <p>Enjoy local craft beer at the island's microbrewery.</p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/dancing.jpg" alt="People dancing at a modern dance club" />
+                    <div class="activity-item-content">
+                        <h4>Dance Club</h4>
+                        <p>Dance the night away at Taniti's new and energetic club.</p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/museum.jpg" alt="Artifacts on display in the local history museum" />
+                    <div class="activity-item-content">
+                        <h4>Museums & Galleries</h4>
+                        <p>Discover Taniti's rich history or browse local art.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Casual Fun</h3>
+            <ul class="activity-grid">
+                <li class="activity-item">
+                    <img src="images/arcade.jpg" alt="A bowling alley with bright lights" />
+                    <div class="activity-item-content">
+                        <h4>Bowling & Arcade</h4>
+                        <p>Perfect for a rainy day or a fun night out with the family.</p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/fishing.jpg" alt="A chartered fishing boat on the open ocean" />
+                    <div class="activity-item-content">
+                        <h4>Chartered Fishing</h4>
+                        <p>Book a tour for a chance to catch big game fish.</p>
+                    </div>
+                </li>
+
+                <li class="activity-item">
+                    <img src="images/golf.jpg" alt="A beautiful green golf course overlooking the ocean" />
+                    <div class="activity-item-content">
+                        <h4>Golf Course (Coming Soon)</h4>
+                        <p>
+                            A new nine-hole course, expected to be operational next year.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Taniti Tourism Board. All Rights Reserved.</p>
+        <p class="credits-link">
+            <a href="citations.html" class="credits-link-color">Image Credits</a>
+        </p>
+    </footer>
+</body>
+
+</html>
